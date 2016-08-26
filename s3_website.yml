@@ -1,0 +1,5 @@
+s3_id: <%= ENV['S3_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['S3_SECRET_KEY'] %>
+s3_bucket: api-docs.bocco.me
+gzip: true
+max_age: 86400

@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: BOCCO API Documentation
+email: contact@ux-xu.com
+description: > # this means to ignore newlines until "baseurl:"
+    documentation for bocco api
+baseurl: "article" # the subpath of your site, e.g. /blog
+url: "http://api-docs.bocco.me" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+exclude: ["README.md", "s3_website.yml"]
+paginate: 5    
+gems: ["jekyll-paginate", "jekyll-sitemap"]
+paginate_path: "/blog/page:num"
+excerpt_separator: "<!--more-->"
