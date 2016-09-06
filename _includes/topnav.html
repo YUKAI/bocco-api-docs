@@ -11,7 +11,7 @@
             <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> {{site.topnav_title}}</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-left">
                 <!-- entries without drop-downs appear here -->
                 {% for entry in site.data.topnav.topnav %}
                 {% for item in entry.items %}
@@ -44,10 +44,13 @@
                 </li>
                 {% endfor %}
                 {% endfor %}
+                {% comment %}
                 {% if site.feedback_disable == null or site.feedback_disable == false %}
 			{% include feedback.html %}
 		{% endif %}
+                {% endcomment %}
                 <!--comment out this block if you want to hide search-->
+                {% comment %}
                 <li>
                     <!--start search-->
                     <div id="search-demo-container">
@@ -68,6 +71,7 @@
                     </script>
                     <!--end search-->
                 </li>
+                {% endcomment %}
             </ul>
         </div>
         </div>
