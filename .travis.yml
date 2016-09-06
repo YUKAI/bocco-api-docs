@@ -1,9 +1,12 @@
 language: ruby
 rvm:
-    - 2.0.0
+- 2.0.0
 install: gem install bundler && bundle install
 script: JEKYLL_ENV=production bundle exec jekyll build
 after_success: bundle exec s3_website push
 branches:
-    only:
-        - master
+  only:
+  - master
+notifications:
+  slack:
+    secure: vrZAXPfLjlZ7gxc+XADC8oFJVSz/YMUGUvOeKSpcoWHaFbdzAvuJKwIiGt2F/O/Vax9VUTfga1r198dJrJGn47cnk0BVrgQ7BbgcHzA1gthE9wVaeKb8RmrLxNQFSKLH4gBVTZ65KhQAt40kMopWZMFLJ4W7ElEanKisfNSs89g8+rhJr+kxw0M5fGUAVBYQjdaAtPrWOcJOBFgg24iYOk/WqoZAra9UvC0prZSwZRM3j+MMP1myJqwP1Yt8+WTTT/MEIPjUr2HBSwgcUfgfJ7AWJA4quwn3n69p3vcQuL3jzGwxxhrQHX4lkG85sj2Tf1ewb7wtcH6JSm/ujA86H22++CS9IORFKbHhSlc3voJUL//akTUwNnXzlqWDx4B5rxUaceJgRvoVnaRfgj4SaDBQN/zbf55dvLYtf0W6/DLrAhYFkPatMN9AvOwPy2DVKSHR2KScaicUks6d2SUokf85MH1eIRmO4QMEo1Y3ZwS6HuxGndYZjOrVIUGvEjOUzUGQMsiSj3HJuh7f00/4g9Gaxcu+owJWNsxylYHf6lCx9Jb8UsPG3z5Rq0hLJprlsEA6zhsm1nCSk3k4fuK0KdnxsocRFQC8ikJK4fpnpFBwRP60EX8FOi4BNrMOwlRQHz+KuX0CpL+sZ9H9HZjRUrM/tfcruVKOXqdPSlsuZC0=
