@@ -1,0 +1,24 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: BOCCO API
+  version: 0.1
+  folders:
+
+  - title: 概要
+    output: web, pdf
+    folderitems:
+
+    - title: BOCCO APIとは
+      url: /index.html
+      output: web
+
+    - title: BOCCO APIの申し込み
+      url: /index.html#bocco-api--1
+      output: web
+
+    - title: フィードバック
+      url: /index.html#feedback
+      output: web
+

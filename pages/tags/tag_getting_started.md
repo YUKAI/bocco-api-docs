@@ -1,11 +1,9 @@
 ---
-title: "Getting started pages"
+title: "getting_started タグが付いたページ一覧"
 tagName: getting_started
 search: exclude
 permalink: tag_getting_started.html
-sidebar: mydoc_sidebar
+hide_sidebar: true
 folder: tags
 ---
 {% include taglogic.html %}
-
-{% include links.html %}
