@@ -17,7 +17,7 @@ BOCCO API の現在のステートはベータであり、実験的な段階に�
 
 お申し込み後5営業日以内に、APIキーなどを個別にご連絡差し上げます。
 
-<a class='btn btn-primary' href='https://docs.google.com/forms/d/e/1FAIpQLSeRjTaH4j2s8-JdyvFmf8vH6Lj4ZRrp78AZufrU0pVVv9JJrA/viewform'>BOCCO API に申し込む</a>
+<a class='btn btn-primary' href='https://docs.google.com/forms/d/e/1FAIpQLSeRjTaH4j2s8-JdyvFmf8vH6Lj4ZRrp78AZufrU0pVVv9JJrA/viewform' target='_blank'>BOCCO API に申し込む</a>
 
 ## feedback
 
