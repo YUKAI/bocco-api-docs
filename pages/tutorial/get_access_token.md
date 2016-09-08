@@ -3,25 +3,24 @@ title: BOCCO API のアクセストークンを取得する
 keywords: BOCCO API, リファレンス, BOCCO
 last_updated: September 7, 2016
 tags: [tutorial]
-sidebar: tutorial
+toc_at_sidebar : true
 permalink: /get_access_token
 folder: tutorial
 summary: BOCCO API のアクセストークンを取得する方法を学びます。
 ---
 
-## アクセストークンを取得する
 
-### 準備
+## 準備
 
-#### APIキーの取得
+### APIキーの取得
 
 アクセストークンを取得するためには、APIキーが必要です。まだお持ちでない場合は、[BOCCO APIの申し込み](index.html#bocco-api--1) を先に行ってください。
 
-#### ユーザ登録
+### ユーザ登録
 
 BOCCO アプリから、予めユーザ登録を完了させてください。
 
-### リクエスト
+## リクエスト
 
 curl を使った場合のリクエスト例です。
 
@@ -36,9 +35,9 @@ curl -i "https://api.bocco.me/alpha/sessions" \
     -d "password=strongpassword"
 ```
 
-### レスポンス
+## レスポンス
 
-#### 成功
+### 成功
 
 正しい情報が入力されていれば、 JSON で `access_token` が返ってきます。  
 この `access_token` を使用して、その他のAPIを叩くことが出来ます。
@@ -65,7 +64,7 @@ Via: 1.1 vegur
 }
 ```
 
-#### 失敗
+### 失敗
 
 入力した情報のいずれか1つでも誤っていると、 `access_token` が返ってきません。
 
@@ -90,3 +89,7 @@ Via: 1.1 vegur
     "message" : "Invalid apikey"
 }
 ```
+
+これで「アクセストークンを取得する」のチュートリアルを終わります。
+
+次の項目は、「[チャットルームを取得する](get_joined_rooms)」です。
