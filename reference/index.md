@@ -12,51 +12,61 @@ folder: reference
 
     https://api.bocco.me
 
-## Access Tokenの取得
+## アクセストークンの取得
+`Session` のリソース。
 
-### Session Collection [/alpha/sessions]
+### セッション [/alpha/sessions]
 
-#### Signin [POST]
+#### サインイン [POST]
 
-ユーザの入力したアカウント情報からセッション情報を作成し、Access Tokenを取得します。
+ユーザの入力したアカウント情報からセッション情報を作成し、アクセストークンを取得します。
 
++ パラメータ
+    + apikey (必須, string, `xxxxxxxxxxx`) ... BOCCOサポートから受け取ったAPIキー。
+    + email (必須, string, `email@example.com`) ... ユーザ登録時に入力したメールアドレス。
+    + password (必須, string, `xxxxxxxxxxx`) ... ユーザ登録時に入力したパスワード。
 
-+ Parameters
++ レスポンス 200 (application/json)
 
-    + apikey (required, string, `xxxxxxxxxxx`) ... Get one from BOCCO support.
-    + email (required, string, `email@example.com`) ... Should be a valid email.
-    + password (required, string, `xxxxxxxxxxx`) ... Should match the password used when created.
-
-+ Response 200 (application/json)
-
-    A new `access_token` is returned.
-
-    + Body
-
-    {"access_token":"f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6","uuid":"e8bdc076-4045-45a7-abea-b4a34e00a417"}
-
-+ Response 401 (text/plain)
-
-    Server responds with 401 if email doesn't exist or email-password pair doesn't match.
+    新しい `access_token` が返されます。
 
     + Body
 
-    {"code":401001,"message":"Unauthorized"}
+    ```json
+    {
+        "access_token" : "f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6",
+        "uuid" : "e8bdc076-4045-45a7-abea-b4a34e00a417"
+    }
+    ```
 
-## Group Rooms
-Rooms resource
-
-### Joined Rooms Collection [/alpha/rooms/joined]
-
-#### Fetch Joined Rooms [GET]
-
-+ Parameters
-    + access_token (required, string) ...
-
-+ Response 200 (application/json)
++ レスポンス 401 (application/json)
+    
+    `apikey`, `email`, `password` のいずれかが誤っている場合 401 が返ります。
 
     + Body
 
+    ```json
+    {
+        "code": 401001,
+        "message" : "Unauthorized"
+    }
+    ```
+
+## チャットルーム
+`Room` のリソース
+
+### 入っているチャットルーム一覧 [/alpha/rooms/joined]
+
+#### 入っているチャットルームの取得 [GET]
+
++ パラメータ (クエリストリング)
+    + access_token (必須, string, `f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6`) ... 取得したアクセストークン。
+
++ レスポンス 200 (application/json)
+
+    + Body
+
+    ```json
     [
       {
         "uuid": "E7607BA3-2AA0-4DEB-8959-E384B3DE82B0",
@@ -111,31 +121,33 @@ Rooms resource
         ]
       }
     ]
+    ```
 
-### Messages in Room Collection [/alpha/rooms/{room_id}/messages]
+### メッセージ一覧 [/alpha/rooms/{room_id}/messages]
 
-Messages are ordered by id *ASC* which is the same order as the app's messages view.
+メッセージは id の *昇順* で返ります。アプリのメッセージ一覧と同じ並び順です。
 
-+ Parameters
-    + room_id (required, string, `2cf4c5b5-8991-46d7-a373-246a9998ab45`) ... uuid of the room.
++ パラメータ
+    + room_id (必須, string, `2cf4c5b5-8991-46d7-a373-246a9998ab45`) ... チャットルームのuuid。
 
-#### Fetch Messages [GET]
+#### メッセージの取得 [GET]
 
-User must have permission to the apikey to access this API. (Get permission from BOCCO support)
+このAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。
 
-+ Parameters
-    + newer_than (optional, integer, `1`) ... Response will include messages with `id` parameter newer than (not including) this.
-    + older_than (optional, integer, `9`) ... Response will include messages with `id` parameter older than (not including) this.
-    + access_token (required, string) ...
-    + read (optional, bool, `1`) ... If 1, server will record that the newest message included in the response is read by the client.
++ パラメータ
+    + newer_than (任意, integer, `1`) ... 指定した `id` より新しいメッセージが返ります。指定した `id` のメッセージは含まれません。
+    + older_than (任意, integer, `9`) ... 指定した `id` より古いメッセージが返ります。指定した `id` のメッセージは含まれません。
+    + access_token (必須, string, `f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6`) ... 取得したアクセストークン。
+    + read (任意, bool, `1`) ... 1 が指定された場合、レスポンスに含まれる最新のメッセージを既読にします。
 
-+ Response 200 (application/json)
++ レスポンス 200 (application/json)
 
-    Messages are ordered by `id` ascending.
-    `detail` key's value differs according to `message_type` key.
+    メッセージは `id` の昇順です。  
+    `detail` キーの内容は、 `message_type` によって異なります。
 
     + Body
 
+    ```json
     [
       {
         "id": 60,
@@ -174,9 +186,11 @@ User must have permission to the apikey to access this API. (Get permission from
         "detail": null
       }
     ]
+    ```
 
-    + Message format if message_type: system.human_joined or system.sensor_joined
+    + message_type が `system.human_joined` もしくは `system.sensor_joined` の場合
 
+    ```json
       {
         "id": 110508,
         "unique_id": "4a169f98-065d-4937-aed8-1596919b79fa",
@@ -204,20 +218,22 @@ User must have permission to the apikey to access this API. (Get permission from
           }
         }
       }
+    ```
 
-#### Post a Message [POST]
+#### メッセージの送信 [POST]
 
-+ Parameters
++ パラメータ
 
-    + text (optional, string, `Hi!`) ... Set `media` parameter to `text` when added.
-    + audio (optional, binary) ... Binary data of audio file. Set `Content-Type: multipart/form-data` header properly. Set `media` parameter to `audio` when added.
-    + image (optional, binary) ... Binary data of image file. Set `Content-Type: multipart/form-data` header properly. Set `media` parameter to `image` when added.
-    + unique_id (required, string, `F7827189-E419-4012-820F-4AFD608E1ED2`) ... Unique identifier of message generated on client for idempotence.
-    + media (required, string, `text` or `audio` or `image`) ...
-    + access_token (required, string) ...
+    + text (任意, string, `Hi!`) ... `text` を送信する場合、 `media` パラメータを `text` に指定します。
+    + audio (任意, binary) ... audioファイルをバイナリで指定します。 `audio` を送信する場合、 ヘッダーに `Content-Type: multipart/form-data` を指定して、`media` パラメータを `audio` に指定します。
+    + image (任意, binary) ... imageファイルをバイナリで指定します。 `image` を送信する場合、 ヘッダーに `Content-Type: multipart/form-data` を指定して、`media` パラメータを `image` に指定します。
+    + unique_id (必須, string, `F7827189-E419-4012-820F-4AFD608E1ED2`) ... 冪等性を担保するため、クライアント側で生成したユニークIDを指定します。
+    + media (必須, string, `text` or `audio` or `image`) ... 送信するメッセージの種類を指定します。
+    + access_token (必須, string, `f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6`) ... 取得したアクセストークン。
 
-+ Request (multipart/form-data; boundary=BOUNDARY)
++ リクエスト (multipart/form-data; boundary=BOUNDARY)
 
+    ```
     --BOUNDARY
     Content-Disposition: form-data; name="audio"; filename="audio1.wav"
     Content-Type: application/octet-stream
@@ -237,14 +253,16 @@ User must have permission to the apikey to access this API. (Get permission from
 
     audio
     --BOUNDARY--
+    ```
 
 
-+ Response 201 (application/json)
++ レスポンス 201 (application/json)
 
-    Status code can be 200 if we have already saved that message.
+    メッセージが作成された。
 
     + Body
 
+    ```json
     {
       "id":60,
       "unique_id":"4ECD2AC5-C9EB-4415-BFAF-BB212F89003A",
@@ -262,33 +280,51 @@ User must have permission to the apikey to access this API. (Get permission from
       "audio":"http://localhost:8000/1/messages/60.wav",
       "message_type":"normal"
     }
+    ```
+
++ レスポンス 200 (application/json)
+
+    メッセージが既に保存されたものであった場合、ステータスコード 200 が返ります。 unique_id によって識別されます。
+
+    + Body
+    
+
+    ```json
+    {
+      "date":"2014-12-23T14:58:06+09:00",
+      "id":60,
+      "media":"text",
+      "message_type":"normal"
+      "unique_id":"4ECD2AC5-C9EB-4415-BFAF-BB212F89003A"
+    }
+    ```
+
+### チャットルームのメッセージ (ストリーミング) [/alpha/rooms/{room_id}/subscribe]
+
+メッセージは id の *昇順* で返ります。アプリのメッセージ一覧と同じ並び順です。
+
++ パラメータ (URL)
+    + room_id (必須, string, `2cf4c5b5-8991-46d7-a373-246a9998ab45`) ... チャットルームのUUID。
+
+#### イベントの受信 [GET]
+
+このAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。
+
+このAPIはロングポーリングのリクエストです。 `newer_than` パラメータより新しいメッセージが来た場合に、レスポンスとして返ります。来なかった場合はタイムアウトとなります。
+
+レスポンスには `event` として `message` または `member` が返ります。全てのイベントには `event` と `body` キーが含まれます。クライアントは `event` キーの中身を見て、処理を分岐する必要があります。 `message` イベントのフォーマットは、 "メッセージの取得" API のフォーマットと同じです。
 
 
-### Streaming Messages in Room Collection [/alpha/rooms/{room_id}/subscribe]
++ パラメータ (クエリストリング)
+    + newer_than (必須, integer, `1`) ... 指定した `id` より新しいメッセージが返ります。指定した `id` のメッセージは含まれません。
+    + access_token (必須, string, `f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6`) ... 取得したアクセストークン。
+    + read (任意, bool, `1`) ... 1 が指定された場合、レスポンスに含まれる最新のメッセージを既読にします。
 
-Messages are ordered by id *ASC* which is the same order as the app's messages view.
++ レスポンス 200 (application/json)
 
-+ Parameters
-    + room_id (required, string, `2cf4c5b5-8991-46d7-a373-246a9998ab45`) ... uuid of the room.
+    + Body (event が `message` の場合)
 
-#### Subscribe to Events [GET]
-
-User must have permission to the apikey to access this API. (Get permission from BOCCO support)
-
-This is a long polling request. Server will respond with a response only if either server has a message newer than provided `newer_than` parameter, or timeout occurs.
-
-Response includes either `message` or `member` events (for now). All events have `event` and `body` keys. Client should branch their code using `event` key.
-`message` event format is the same as "Fetch Messages" response format.
-
-+ Parameters
-    + newer_than (required, integer, `1`) ... Response will include messages with `id` parameter newer than (not including) this.
-    + access_token (required, string) ...
-    + read (optional, bool, `1`) ... If 1, server will record that the newest message included in the response is read by the client.
-
-+ Response 200 (application/json)
-
-    + Body (Message event)
-
+    ```json
     {
       "event": "message",
       "body": {
@@ -311,9 +347,11 @@ Response includes either `message` or `member` events (for now). All events have
         "detail": null
       }
     }
+    ```
 
-    + Body (Member event)
-
+    + Body (event が `member` の場合)
+    
+    ```json
     {
       "event": "member",
       "body": {
@@ -328,50 +366,72 @@ Response includes either `message` or `member` events (for now). All events have
         "read_id": 333
       }
     }
+    ```
 
-+ Response 408 (text/plain)
-
-    + Body
-
-### Single Message Read Status [/alpha/rooms/{room_id}/messages/{message_id}/read]
-
-#### Report Read Status Update [POST]
-
-User must have permission to the apikey to access this API. (Get permission from BOCCO support)
-
-+ Parameters
-
-    + access_token (required, string, `f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6`) ...
-
-+ Response 200 (application/json)
++ レスポンス 408 (application/json)
+    
+    ロングポーリング中に、 `newer_than` より新しいメッセージが届かなかったら、 408 が返ります。
 
     + Body
 
-        {}
+    ```
+    {
+        "code" : 408001,
+        "message" : "Request Timeout"
+    }
+    ```
+
+### メッセージの既読状態 [/alpha/rooms/{room_id}/messages/{message_id}/read]
+
++ URLパラメータ
+    + room_id (必須, string, `2cf4c5b5-8991-46d7-a373-246a9998ab45`) ... チャットルームのUUID。
+    + message_id (必須, int, `123`) ... メッセージの `id`。
+
+#### メッセージを既読にする [POST]
+
+このAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。
+
++ パラメータ
+
+    + access_token (必須, string, `f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6`) ... 取得したアクセストークン。
+
++ レスポンス 200 (application/json)
+
+    + Body
+
+    ```json
+    {}
+    ```
 
 
-## Errors
+## エラー
 
-### HTTP status codes
+### HTTP ステータスコード
 
-HTTP status codes follow their original meanings, see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes .
+HTTP ステータスコードは本来の意味で使われます。詳しくは、[HTTPステータスコード(ウィキペディア)](https://ja.wikipedia.org/wiki/HTTP%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89) をご覧ください。
 
-+ 401 : access_token is invalid, you're stuck, remove everything and start over from setup.
-+ 400 : GET/POST request's parameters are invalid, please check parameters, fix and try again.
-+ 404 : Requested resource is not found or not permitted. confirm the resource is accessible.
-+ 408 : Request Timeout, check network connection and try again.
-+ 429 : Too Many Requests, wait for a while and try again.
-+ 500 : Internal Server Error, contact BOCCO support.
-+ 502 : Bad Gateway, contact BOCCO support.
-+ 503 : Service Unavailable, contact BOCCO support.
++ 401 : `access_token` が不正です。全てを初期化して、初めの手順からやり直す必要があります。
++ 400 : GET/POST リクエストのパラメータが不正です。パラメータを確認してください。
++ 404 : リクエストされたリソースが見つからない、もしくは権限がありません。リソースがアクセス可能なことを確認してください。
++ 408 : リクエストタイムアウト。ネットワーク状態を確認してください。
++ 429 : 過剰なリクエスト頻度。しばらく待ってから、再度リクエストしてください。
++ 500 : 内部エラー。BOCCOサポートへお問い合わせください。
++ 502 : 不正なゲートウェイ。BOCCOサポートへお問い合わせください。
++ 503 : サービス利用不可。BOCCOサポートへお問い合わせください。
 
-### Response body
+### レスポンス Body
 
-When HTTP status code is not equal to 200, response body looks like:
+HTTPステータスが 200 以外のとき、下記のような Body が返ります。
 
-    {"code":xxxxxx,"message":xxxxxxxx}
+```json
+{
+    "code" : xxxxxx,
+    "message" : xxxxxxxx
+}
+```
 
-`code` is a error identifier. See each endpoint documentation for details.
-`message` is a localized human readable error message.
+`code` はエラー識別子です。各APIの詳細を確認してください。  
+`message` はローカライズされた人間可読なエラーメッセージです。
+
 
 {% include links.html %}
