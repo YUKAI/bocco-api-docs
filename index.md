@@ -25,6 +25,3 @@ BOCCO APIに関するお問い合わせやご意見は下記のgithub issues、�
 
 - github: [https://github.com/YUKAI/bocco-api-docs](https://github.com/YUKAI/bocco-api-docs)
 - mail: bocco-api [at] ux-xu.com
-
-
-{% include links.html %}
