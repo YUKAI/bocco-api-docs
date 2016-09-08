@@ -27,7 +27,7 @@ API リクエストに、 `access_token` が必要です。
 curl を使った場合のリクエスト例です。  
 ここでは、「こんにちはBOCCO！」というテキストメッセージを送ります。
 
-`room_id` として、チャットルームの取得で返ってきた `E7607BA3-2AA0-4DEB-8959-E384B3DE82B0` を使用します。
+`room_id` として、チャットルームの取得で返ってきた `E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX` を使用します。
 
 リクエストBody
 
@@ -42,8 +42,8 @@ curl を使った場合のリクエスト例です。
 
 
 ```bash
-curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/messages" \
-    -d "access_token= f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6"
+curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX/messages" \
+    -d "access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     -d "unique_id=`uuidgen`"
     -d "media=text"
     -d "text=こんにちはBOCCO！"
@@ -75,14 +75,14 @@ Via: 1.1 vegur
 ```json
 {
   "id":60,
-  "unique_id":"4ECD2AC5-C9EB-4415-BFAF-BB212F89003A",
+  "unique_id":"4ECD2AC5-C9EB-4415-BFAF-ZZZZZZZZZZZZ",
   "text":"F",
-  "sender":"1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+  "sender":"1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
   "user":{
-    "uuid":"1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+    "uuid":"1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
     "user_type":"human",
     "nickname":"aopico",
-    "icon":"http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-502d339460a7.png",
+    "icon":"http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-000000000000.png",
     "seller":""
   },
   "date":"2014-12-23T14:58:06+09:00",

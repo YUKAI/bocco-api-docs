@@ -26,7 +26,7 @@ curl を使った場合のリクエスト例です。
 - password: ユーザ登録時に入力したパスワード。
 
 ```bash
-curl -i "https://api.bocco.me/alpha/rooms/joined?access_token=f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6"
+curl -i "https://api.bocco.me/alpha/rooms/joined?access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 ## レスポンス
@@ -54,14 +54,14 @@ Via: 1.1 vegur
 ```json
 [
   {
-    "uuid": "E7607BA3-2AA0-4DEB-8959-E384B3DE82B0",
+    "uuid": "E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX",
     "name": "Happy Family",
     "updated_at": "2015-07-31T21:47:46+09:00",
-    "background_image": "http://localhost:8000/1/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/df5dfb71-9d58-4b50-b82f-eb2524da56da.png",
+    "background_image": "http://localhost:8000/1/rooms/E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX/df5dfb71-9d58-4b50-b82f-000000000000.png",
     "members": [
       {
         "user": {
-          "uuid": "eb11c90f-f1a2-43a8-8a12-40406e44005b",
+          "uuid": "eb11c90f-f1a2-43a8-8a12-xxxxxxxxxxxx",
           "user_type": "human",
           "nickname": "5",
           "icon": "",
@@ -75,27 +75,27 @@ Via: 1.1 vegur
     "messages": [
       {
         "id": 24686,
-        "unique_id": "1DB34B93-0DFA-4150-AEF5-CBED1F8220C3",
+        "unique_id": "1DB34B93-0DFA-4150-AEF5-YYYYYYYYYYYY",
         "date": "2015-07-31T21:47:46+09:00",
         "media": "text",
         "message_type": "normal",
         "user": {
-          "uuid": "cffbf787-dd20-4157-8279-f5d287e1783c",
+          "uuid": "cffbf787-dd20-4157-8279-yyyyyyyyyyyy",
           "user_type": "human",
           "nickname": "mash",
-          "icon": "http://localhost:8000/1/users/cffbf787-dd20-4157-8279-f5d287e1783c/d4187679-bd07-49f8-94c9-207f47d641a0.png",
+          "icon": "http://localhost:8000/1/users/cffbf787-dd20-4157-8279-yyyyyyyyyyyy/d4187679-bd07-49f8-94c9-000000000000.png",
           "seller": ""
         },
         "text": "hoge",
         "audio": "http://localhost:8000/1/messages/24686.ogg",
         "image": "",
-        "sender": "cffbf787-dd20-4157-8279-f5d287e1783c",
+        "sender": "cffbf787-dd20-4157-8279-yyyyyyyyyyyy",
         "detail": null
       }
     ],
     "sensors": [
       {
-        "uuid": "AAA5EC17-7981-4FDC-B783-51BAD4868D38",
+        "uuid": "AAA5EC17-7981-4FDC-B783-ZZZZZZZZZZZZ",
         "user_type": "sensor_fire",
         "nickname": "sensor_fire",
         "icon": "",

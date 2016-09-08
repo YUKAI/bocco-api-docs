@@ -27,11 +27,11 @@ API リクエストに、 `access_token` が必要です。
 
 curl を使った場合のリクエスト例です。  
 
-`room_id` として、チャットルームの取得で返ってきた `E7607BA3-2AA0-4DEB-8959-E384B3DE82B0` を使用します。
+`room_id` として、チャットルームの取得で返ってきた `E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX` を使用します。
 
 
 ```bash
-curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/messages?access_token=f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6"
+curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX/messages?access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 
@@ -60,14 +60,14 @@ Via: 1.1 vegur
 [
   {
     "id": 60,
-    "unique_id": "4ECD2AC5-C9EB-4415-BFAF-BB212F89003A",
+    "unique_id": "4ECD2AC5-C9EB-4415-BFAF-ZZZZZZZZZZZZ",
     "text": "こんにちはBOCCO！",
-    "sender": "1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+    "sender": "1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
     "user": {
-      "uuid": "1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+      "uuid": "1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
       "user_type": "human",
       "nickname": "aopico",
-      "icon": "http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-502d339460a7.png",
+      "icon": "http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-000000000000.png",
       "seller": ""
     },
     "date": "2014-12-23T14:58:06+09:00",
@@ -78,19 +78,19 @@ Via: 1.1 vegur
   },
   {
     "id": 61,
-    "unique_id": "849C4F97-BB2D-4047-8A8E-5035E8025CED",
+    "unique_id": "849C4F97-BB2D-4047-8A8E-YYYYYYYYYYYY",
     "text": "おはよう",
-    "sender": "1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+    "sender": "1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
     "user": {
-      "uuid": "1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+      "uuid": "1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
       "user_type": "human",
       "nickname": "aopico",
-      "icon": "http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-502d339460a7.png",
+      "icon": "http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-000000000000.png",
       "seller": ""
     },
     "date": "2014-12-23T14:58:38+09:00",
     "media": "text",
-    "audio": "http://localhost:8000/1/messages/C4D86E06-2C1F-4672-988F-DD9645DFC19C.wav",
+    "audio": "http://localhost:8000/1/messages/C4D86E06-2C1F-4672-988F-000000000000.wav",
     "message_type": "normal",
     "detail": null
   }
@@ -136,7 +136,7 @@ Via: 1.1 vegur
 
 
 ```bash
-curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/messages?access_token=f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6&newer_than=61"
+curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX/messages?access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&newer_than=61"
 ```
 
 ### レスポンス
@@ -154,7 +154,7 @@ curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/m
 メッセージを送信したら、先ほどと同じ内容で再度メッセージを取得してみます。
 
 ```bash
-curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/messages?access_token=f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6&newer_than=61"
+curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX/messages?access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&newer_than=61"
 ```
 
 ### レスポンス
@@ -163,19 +163,19 @@ curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/m
 [
   {
     "id": 70,
-    "unique_id": "DC1F23A2-7571-4CBE-8364-7ADE1E445BF1",
+    "unique_id": "DC1F23A2-7571-4CBE-8364-XXXXXXXXXXXX",
     "text": "こんばんは",
-    "sender": "1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+    "sender": "1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
     "user": {
-      "uuid": "1bb7bf12-83cf-40fa-9c33-e8580852ba5d",
+      "uuid": "1bb7bf12-83cf-40fa-9c33-xxxxxxxxxxxx",
       "user_type": "human",
       "nickname": "aopico",
-      "icon": "http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-502d339460a7.png",
+      "icon": "http://localhost:8000/assets/images/23fe1d3a-c1e1-4c56-87ed-000000000000.png",
       "seller": ""
     },
     "date": "2014-12-23T15:30:13+09:00",
     "media": "text",
-    "audio": "http://localhost:8000/1/messages/37025D32-CA82-4D86-9A0D-C4A923728F30.wav",
+    "audio": "http://localhost:8000/1/messages/37025D32-CA82-4D86-9A0D-000000000000.wav",
     "message_type": "normal",
     "detail": null
   }
