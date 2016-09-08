@@ -4,7 +4,7 @@ keywords: BOCCO API, リファレンス, BOCCO
 last_updated: September 7, 2016
 tags: [tutorial]
 toc_at_sidebar: true
-permalink: /get_messages
+permalink: /get_messages.html
 folder: tutorial
 summary: BOCCO API を使って、メッセージを取得する方法を学びます。
 ---

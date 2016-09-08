@@ -4,7 +4,7 @@ keywords: BOCCO API, リファレンス, BOCCO
 last_updated: September 7, 2016
 tags: [tutorial]
 toc_at_sidebar: true
-permalink: /post_message
+permalink: /post_message.html
 folder: tutorial
 summary: BOCCO API を使って、メッセージを送信する方法を学びます。
 ---

@@ -4,7 +4,7 @@ keywords: BOCCO API, リファレンス, BOCCO
 last_updated: September 7, 2016
 tags: [tutorial]
 toc_at_sidebar : true
-permalink: /get_access_token
+permalink: /get_access_token.html
 folder: tutorial
 summary: BOCCO API のアクセストークンを取得する方法を学びます。
 ---
