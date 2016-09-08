@@ -183,6 +183,6 @@ curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/m
 ```
 
 送信したメッセージが返ってきます。  
-さらに詳細が知りたい場合は、[リファレンス(メッセージ一覧の取得)](/reference.html#get-roomsroomidmessages) をご覧ください。
 
-「メッセージを取得する」のチュートリアルを終わります。
+これで「メッセージを取得する」のチュートリアルを終わります。  
+さらに詳細が知りたい場合は、[リファレンス(メッセージ一覧の取得)](/reference.html#get-roomsroomidmessages) をご覧ください。
