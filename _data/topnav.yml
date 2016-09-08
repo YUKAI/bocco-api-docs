@@ -6,7 +6,12 @@ topnav:
     - title: 概要
       url: /index.html
     - title: チュートリアル
-      url: /tutorial
+      folderitems:
+        - title: アクセストークンの取得
+          url: /get_access_token
+    - title: 概要
+      url: /index.html
+
     - title: リファレンス
       url: /reference
     # - title: ニュース
