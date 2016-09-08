@@ -14,12 +14,12 @@ summary: BOCCO API を使って、メッセージを取得する方法を学び�
 ### アクセストークンの取得
 
 API リクエストに、 `access_token` が必要です。   
-[アクセストークンの取得](get_access_token) の手順に従い、`access_token` を事前に取得してください。
+[アクセストークンの取得](/get_access_token.html) の手順に従い、`access_token` を事前に取得してください。
 
 ### room_id の取得
 
 メッセージを送信するチャットルームを指定するために、 `room_id` が必要です。
-[チャットルームの取得](get_joined_rooms) の手順に従い、`uuid` (以後 `room_id` として使う) を事前に取得してください。
+[チャットルームの取得](/get_joined_rooms.html) の手順に従い、`uuid` (以後 `room_id` として使う) を事前に取得してください。
 
 ## 範囲を指定せずに取得
 
@@ -147,7 +147,7 @@ curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/m
 
 空のレスポンスが返ってきましたか？先ほどメッセージを取得してから新しいメッセージがなければ、このようなレスポンスが返って来ます。
 
-[メッセージの送信](post_message) のように、1件新しいメッセージを送信してみましょう。
+[メッセージの送信](/post_message.html) のように、1件新しいメッセージを送信してみましょう。
 
 ### 再度リクエスト 
 
@@ -183,6 +183,6 @@ curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-E384B3DE82B0/m
 ```
 
 送信したメッセージが返ってきます。  
-さらに詳細が知りたい場合は、[リファレンス(メッセージ一覧の取得)](/reference#get-roomsroomidmessages) をご覧ください。
+さらに詳細が知りたい場合は、[リファレンス(メッセージ一覧の取得)](/reference.html#get-roomsroomidmessages) をご覧ください。
 
 「メッセージを取得する」のチュートリアルを終わります。

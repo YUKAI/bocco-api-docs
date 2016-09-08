@@ -9,16 +9,16 @@ topnav:
     - title: チュートリアル
       folderitems:
         - title: アクセストークンを取得する
-          url: /get_access_token
+          url: /get_access_token.html
         - title: チャットルームを取得する
-          url: /get_joined_rooms
+          url: /get_joined_rooms.html
         - title: メッセージを送信する
-          url: /post_message
+          url: /post_message.html
         - title: メッセージを取得する
-          url: /get_messages
+          url: /get_messages.html
 
     - title: リファレンス
-      url: /reference
+      url: /reference.html
     # - title: ニュース
       # url: /news
 

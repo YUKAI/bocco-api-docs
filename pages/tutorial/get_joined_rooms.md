@@ -14,7 +14,7 @@ summary: BOCCO API を使って、自分が入っているチャットルーム�
 ### アクセストークンの取得
 
 API リクエストに、 `access_token` が必要です。   
-[アクセストークンの取得](get_access_token) の手順に従い、`access_token` を事前に取得してください。
+[アクセストークンの取得](/get_access_token.html) の手順に従い、`access_token` を事前に取得してください。
 
 
 ## リクエスト
@@ -134,6 +134,6 @@ Via: 1.1 vegur```
 ```
 
 これで「チャットルームを取得する」のチュートリアルを終わります。  
-さらに詳細が知りたい場合は、[リファレンス(チャットルームの取得)](/reference#get-roomsjoined) をご覧ください。
+さらに詳細が知りたい場合は、[リファレンス(チャットルームの取得)](/reference.html#get-roomsjoined) をご覧ください。
 
-次の項目は、「[メッセージを送信する](post_message)」です。
+次の項目は、「[メッセージを送信する](/post_message.html)」です。
