@@ -9,6 +9,8 @@ topnav:
       folderitems:
         - title: アクセストークンの取得
           url: /get_access_token
+        - title: チャットルームの取得
+          url: /get_joined_rooms
     - title: 概要
       url: /index.html
 
