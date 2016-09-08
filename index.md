@@ -3,6 +3,7 @@ title: BOCCO API 概要
 keywords: BOCCO API Documents
 tags: [getting_started]
 sidebar: abstract
+toc_at_sidebar: true
 permalink: index.html
 ---
 
