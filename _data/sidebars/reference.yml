@@ -1,0 +1,44 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: BOCCO API
+  version: 0.1
+  folders:
+
+  - title: API仕様
+    output: web, pdf
+    folderitems:
+
+      - title: 共通仕様
+        url: /reference#section
+        output: web
+
+      - title: アクセストークンの取得
+        url: '#post-sessions'
+        output: web
+
+      - title: チャットルーム一覧の取得
+        url: '#get-roomsjoined'
+        output: web
+
+      - title: メッセージ一覧の取得
+        url: '#get-roomsroomidmessages'
+        output: web
+
+      - title: メッセージの送信
+        url: '#post-roomsroomidmessages'
+        output: web
+
+      - title: イベントの取得
+        url: '#get-roomsroomidsubscribe'
+        output: web
+
+      - title: メッセージを既読にする
+        url: '#post-roomsroomidmessagesmessageidread'
+        output: web
+
+      - title: エラー
+        url: '#section-27'
+        output: web
+

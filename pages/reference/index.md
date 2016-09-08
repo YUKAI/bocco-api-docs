@@ -9,6 +9,7 @@ folder: reference
 ---
 
 ## 共通仕様
+
 ### API Endpoint
 
 https://api.bocco.me/alpha
@@ -62,7 +63,9 @@ UTF-8
 }
 ```
 
-## 入っているチャットルームの取得 [GET /rooms/joined]
+## チャットルームの取得 [GET /rooms/joined]
+
+自分が入っているチャットルームの一覧を取得します。
 
 ### リクエスト
 
@@ -312,7 +315,7 @@ audio
 }
 ```
 
-## イベント取得 (ストリーミング) [GET /rooms/{room_id}/subscribe]
+## イベントの取得 [GET /rooms/{room_id}/subscribe]
 
 このAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。
 
