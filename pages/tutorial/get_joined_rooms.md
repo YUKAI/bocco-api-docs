@@ -4,7 +4,7 @@ keywords: BOCCO API, リファレンス, BOCCO
 last_updated: September 7, 2016
 tags: [tutorial]
 toc_at_sidebar: true
-permalink: /get_joined_rooms
+permalink: /get_joined_rooms.html
 folder: tutorial
 summary: BOCCO API を使って、自分が入っているチャットルームの一覧を取得する方法を学びます。
 ---
