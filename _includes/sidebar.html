@@ -1,4 +1,5 @@
-{% if page.toc_at_sidebar %}
+{% if page.hide_sidebar %}
+{% elsif page.toc_at_sidebar %}
 {% include toc.html %}
 {% else %}
 

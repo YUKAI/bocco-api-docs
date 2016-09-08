@@ -1,8 +1,4 @@
 allowed-tags:
   - getting_started
-  - content_types
-  - navigation
-  - formatting
-  - publishing
-  - troubleshooting
   - tutorial
+  - reference
