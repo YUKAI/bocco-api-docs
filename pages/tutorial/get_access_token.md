@@ -30,7 +30,7 @@ curl を使った場合のリクエスト例です。
 
 ```bash
 curl -i "https://api.bocco.me/alpha/sessions" \
-    -d "apikey=f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6" \
+    -d "apikey=dqdsj4vu5w7f0mb1zmi1f7jpfhitpuplxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
     -d "email=user@example.com" \
     -d "password=strongpassword"
 ```
@@ -59,8 +59,8 @@ Via: 1.1 vegur
 
 ```json
 {
-    "access_token" : "f2a87cb04ef23a714a1a438f567abb6812f8fbd9a33e28b789202e45190739d6",
-    "uuid" : "e8bdc076-4045-45a7-abea-b4a34e00a417"
+    "access_token" : "x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "uuid" : "e8bdc076-4045-45a7-abea-xxxxxxxxxxxx"
 }
 ```
 
