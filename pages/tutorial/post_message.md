@@ -121,5 +121,4 @@ Via: 1.1 vegur
 これで「メッセージを送信する」のチュートリアルを終わります。  
 さらに詳細が知りたい場合は、[リファレンス(メッセージの送信)](/reference.html#post-roomsroomidmessages) をご覧ください。
  
-
 次の項目は、「[メッセージを取得する](/get_messages.html)」です。
