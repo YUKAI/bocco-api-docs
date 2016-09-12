@@ -93,7 +93,7 @@ defaults:
       sidebar: home_sidebar
 
 
-- google_analytics: "UA-28970229-10"
+google_analytics: "UA-28970229-10"
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
