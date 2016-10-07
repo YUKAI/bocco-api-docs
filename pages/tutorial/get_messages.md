@@ -123,6 +123,30 @@ Via: 1.1 vegur
 }
 ```
 
+`room_id` が誤っていると、404が返ります。
+
+レスポンスHeaders
+
+```
+HTTP/1.1 404 Not Found
+Server: Cowboy
+Connection: keep-alive
+Content-Type: application/json; charset=utf-8
+Vary: Accept-Encoding
+Date: Fri, 07 Oct 2016 03:18:55 GMT
+Content-Length: 37
+Via: 1.1 vegur
+```
+
+レスポンスBody
+
+```json
+{
+    "code" : 404001,
+    "message" : "Not Found"
+}
+```
+
 ## 範囲を指定して取得
 
 先ほどのレスポンスでは、最新の id として 61 が取得出来ました。  
