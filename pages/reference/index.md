@@ -37,8 +37,8 @@ UTF-8
 #### Body
 
 + apikey (必須, string, `xxxxxxxxxxx`) ... BOCCOサポートから受け取ったAPIキー。
-+ email (必須, string, `email@example.com`) ... ユーザ登録時に入力したメールアドレス。
-+ password (必須, string, `xxxxxxxxxxx`) ... ユーザ登録時に入力したパスワード。
++ email (必須, string, `email@example.com`) ... アカウント登録時に入力したメールアドレス。
++ password (必須, string, `xxxxxxxxxxx`) ... アカウント登録時に入力したパスワード。
 
 ### レスポンス
 
