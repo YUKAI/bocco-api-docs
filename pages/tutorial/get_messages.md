@@ -11,6 +11,9 @@ summary: BOCCO API を使って、メッセージを取得する方法を学び�
 
 ## 準備
 
+### 追加権限の取得
+メッセージを取得するAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。
+
 ### アクセストークンの取得
 
 API リクエストに、 `access_token` が必要です。   
@@ -120,6 +123,30 @@ Via: 1.1 vegur
 {
     "code" : 401001,
     "message" : "Unauthorized"
+}
+```
+
+`room_id` が誤っている、もしくは権限が無い場合、404が返ります。
+
+レスポンスHeaders
+
+```
+HTTP/1.1 404 Not Found
+Server: Cowboy
+Connection: keep-alive
+Content-Type: application/json; charset=utf-8
+Vary: Accept-Encoding
+Date: Fri, 07 Oct 2016 03:18:55 GMT
+Content-Length: 37
+Via: 1.1 vegur
+```
+
+レスポンスBody
+
+```json
+{
+    "code" : 404001,
+    "message" : "Not Found"
 }
 ```
 
