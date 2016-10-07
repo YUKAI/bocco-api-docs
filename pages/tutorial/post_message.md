@@ -43,10 +43,10 @@ curl を使った場合のリクエスト例です。
 
 ```bash
 curl -i "https://api.bocco.me/alpha/rooms/E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX/messages" \
-    -d "access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-    -d "unique_id=`uuidgen`"
-    -d "media=text"
-    -d "text=こんにちはBOCCO！"
+    -d "access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
+    -d "unique_id=`uuidgen`" \
+    -d "media=text" \
+    -d "text=こんにちはBOCCO！" \
     -H "Accept-Language: ja"
 ```
 
