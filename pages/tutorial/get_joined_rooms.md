@@ -120,7 +120,8 @@ Content-Type: application/json; charset=utf-8
 Vary: Accept-Encoding
 Date: Thu, 08 Sep 2016 08:40:55 GMT
 Content-Length: 40
-Via: 1.1 vegur```
+Via: 1.1 vegur
+```
 
 レスポンスBody
 
