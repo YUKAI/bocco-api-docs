@@ -423,6 +423,25 @@ audio
 {}
 ```
 
+## 音声ファイルを取得する [GET /messages/{unique_id}.{extname}]
+
+### リクエスト
+
+取得したい音声に対応するメッセージの，`audio`パラメータが音声ファイルのリクエストURLとなります．
+
+#### URLパラメータ
++ unique_id (必須, string, 8C0507DD-FDA1-4229-8731-XXXXXXXXXXXX) ... メッセージの `unique_id`
++ extname (必須，string，wav) ... 音声ファイルの拡張子．`audio`パラメータの拡張子ではなくwavファイルが欲しい場合，このパラメータをwavに変更します．
+
+#### クエリストリング
+
++ access_token (必須, string, `x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`) ... 取得したアクセストークン。
+
+### レスポンス
+
+#### 200
+音声ファイルがダウンロードされます．
+
 
 ## エラー
 
