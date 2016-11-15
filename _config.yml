@@ -87,7 +87,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "page"
       comments: true
       search: true
       sidebar: home_sidebar
@@ -108,3 +108,7 @@ description: "Intended as a documentation theme based on Jekyll for technical wr
 
 # needed for sitemap.xml file only
 url: http://api-docs.bocco.me
+
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "/news/:num/"

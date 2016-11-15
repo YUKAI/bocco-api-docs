@@ -19,8 +19,9 @@ topnav:
 
     - title: リファレンス
       url: /reference.html
-    # - title: ニュース
-      # url: /news
+
+    - title: ニュース
+      url: /news
 
     - title: フィードバック
       url: /index.html#feedback
