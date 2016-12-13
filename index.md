@@ -21,9 +21,16 @@ BOCCO API の現在のステートはベータであり、実験的な段階に�
 
 ## ライブラリ
 
-- https://github.com/YUKAI/bocco-api-python
-- https://github.com/tfuru/TFBoccoSwift
-- https://github.com/tfuru/BoccoEsp
+### ユカイ工学開発のライブラリ
+
+- **python** https://github.com/YUKAI/bocco-api-python
+
+### BOCCO利用者開発のライブラリ
+
+それぞれのライブラリへの問い合わせは各開発者へお願いいたします。
+
+- **swift** https://github.com/tfuru/TFBoccoSwift
+- **esp8266** https://github.com/tfuru/BoccoEsp
 
 ## feedback
 
