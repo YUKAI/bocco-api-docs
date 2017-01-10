@@ -23,14 +23,19 @@ BOCCO API の現在のステートはベータであり、実験的な段階に�
 
 ### ユカイ工学開発のライブラリ
 
-- **python** https://github.com/YUKAI/bocco-api-python
+- **python** [https://github.com/YUKAI/bocco-api-python](https://github.com/YUKAI/bocco-api-python)
 
 ### BOCCO利用者開発のライブラリ
 
 それぞれのライブラリへの問い合わせは各開発者へお願いいたします。
 
-- **swift** https://github.com/tfuru/TFBoccoSwift
-- **esp8266** https://github.com/tfuru/BoccoEsp
+- **node.js** [https://github.com/demaebocco/node_bocco](https://github.com/demaebocco/node_bocco)
+- **swift** [https://github.com/tfuru/TFBoccoSwift](https://github.com/tfuru/TFBoccoSwift)
+- **esp8266** [https://github.com/tfuru/BoccoEsp](https://github.com/tfuru/BoccoEsp)
+
+## 利用事例
+
+- [Google Apps ScriptからBoccoにメッセージを送る](https://yoh7686.github.io/bocco.html)
 
 ## feedback
 
