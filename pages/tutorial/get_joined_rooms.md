@@ -21,7 +21,7 @@ API リクエストに、 `access_token` が必要です。
 
 curl を使った場合のリクエスト例です。
 
-- apikey : API申し込み時に送られてきたAPIキー。
+- access_token : 取得したアクセストークン
 
 ```bash
 curl -i "https://api.bocco.me/alpha/rooms/joined?access_token=x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
