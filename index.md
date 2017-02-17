@@ -35,7 +35,10 @@ BOCCO API の現在のステートはベータであり、実験的な段階に�
 
 ## 利用事例
 
+- [可愛いロボットBOCCOに癒してもらおう &ndash; cybozu developer network](https://cybozudev.zendesk.com/hc/ja/articles/213790523-%E5%8F%AF%E6%84%9B%E3%81%84%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88BOCCO%E3%81%AB%E7%99%92%E3%81%97%E3%81%A6%E3%82%82%E3%82%89%E3%81%8A%E3%81%86)
+- [スマートメーターとBOCCOを連携させる | スマートメーターBルートブログ](http://route-b.iij.ad.jp/archives/116)
 - [Google Apps ScriptからBoccoにメッセージを送る](https://yoh7686.github.io/bocco.html)
+- [【BOCCO開発】BOCCOのAPIが公開されたので使ってみました。 | ロボスタ - ロボット情報WEBマガジン](http://robotstart.info/2016/10/06/bocco_api-review.html)
 
 ## feedback
 
