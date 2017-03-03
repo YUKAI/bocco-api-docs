@@ -23,6 +23,26 @@ UTF-8
 
 `application/json`
 
+### レスポンス中の user_type
+
+メッセージを送信したユーザの種別を判断する際等に利用します。
+
+| 値 | 説明 |
+|---|---|
+| human | アプリユーザ |
+| bocco | BOCCO 本体 |
+| sensor_door | [振動センサ](http://www.bocco.me/2016/09/27/vibration_sensor/) |
+| sensor_lock | [鍵センサ](http://www.bocco.me/2016/09/27/lock_sensor/) |
+
+### レスポンス中の message_type
+
+メッセージの種別を判断する際に利用します。
+
+| 値 | 説明 |
+|---|---|
+| normal | センサ通知等ではない通常のメッセージ |
+| system.human_joined | 部屋に新しいユーザが参加した際のメッセージ |
+| system.sensor_joined | 部屋に新しいセンサが追加された際のメッセージ |
 
 ## アクセストークンの取得 [POST /sessions]
 
