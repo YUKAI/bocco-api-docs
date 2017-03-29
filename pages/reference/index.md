@@ -272,6 +272,10 @@ UTF-8
 + media (必須, string, `text` or `audio` or `image`) ... 送信するメッセージの種類を指定します。
 + access_token (必須, string, `x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`) ... 取得したアクセストークン。
 
+#### Headers
+
++ Accept-Language: `ja` ... 日本語を指定します。
+
 ##### リクエストBody例 (multipart/form-data; boundary=BOUNDARY)
 
 ```
