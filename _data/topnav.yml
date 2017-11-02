@@ -16,6 +16,8 @@ topnav:
           url: /post_message.html
         - title: メッセージを取得する
           url: /get_messages.html
+        - title: 部屋センサの情報を取得する
+          url: /get_room_sensors_messages.html
 
     - title: リファレンス
       url: /reference.html
