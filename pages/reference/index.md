@@ -476,6 +476,9 @@ audio
 + room_id (必須, string, `E7607BA3-2AA0-4DEB-8959-XXXXXXXXXXXX`) ... チャットルームのUUID。
 + sensor_id (必須, string, `6ac61cf0-XXXX-XXXX-XXXX-XXXXXXXXXXXX`) ... 部屋センサのUUID。
 
+`room_id`、`sensors_id`については、[チャットルームの取得](/reference.html#get-roomsjoined) より取得できます。
+また、[チュートリアル(部屋センサの情報を取得する)](/get_room_sensors_messages.html)も合わせてご参照ください。
+
 #### クエリストリング
 
 + access_token (必須, string, `x2c4sjxacw4tq72q5h9vrsgjbcz3p55ixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`) ... 取得したアクセストークン。
