@@ -265,7 +265,7 @@ UTF-8
 #### Body
 
 + text (任意, string, `Hi!`) ... `text` を送信する場合、 `media` パラメータを `text` に指定します。テキストの文字コードはUTF-8で送信してください。
-+ audio (任意, binary) ... audioファイルをバイナリで指定します。 `audio` を送信する場合、 ヘッダーに `Content-Type: multipart/form-data` を指定して、`media` パラメータを `audio` に指定します。
++ audio (任意, binary) ... audioファイルをバイナリで指定します。 `audio` を送信する場合、 ヘッダーに `Content-Type: multipart/form-data` を指定して、`media` パラメータを `audio` に指定します。音声ファイルのフォーマットは、`m4a`のみサポートしております。
 + image (任意, binary) ... imageファイルをバイナリで指定します。 `image` を送信する場合、 ヘッダーに `Content-Type: multipart/form-data` を指定して、`media` パラメータを `image` に指定します。
 + unique_id (必須, string, `F7827189-E419-4012-820F-ZZZZZZZZZZZZ`) ... 冪等性を担保するため、クライアント側で生成したユニークIDを指定します。ユニークIDが同じメッセージは送られません。[UUID version 4](https://ja.wikipedia.org/wiki/UUID#.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B34) の使用が推奨です。`uuidgen` コマンドなどを使用して生成してください。
 
