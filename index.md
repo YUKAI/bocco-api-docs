@@ -46,4 +46,4 @@ BOCCO API の現在のステートはベータであり、実験的な段階に�
 BOCCO APIに関するお問い合わせやご意見は下記のgithub issues、または、メールにてお受けしております。
 
 - github: [https://github.com/YUKAI/bocco-api-docs](https://github.com/YUKAI/bocco-api-docs)
-- mail: bocco-api [at] ux-xu.com
+- mail: support-en [at] bocco.me
