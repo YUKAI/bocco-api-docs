@@ -157,7 +157,6 @@ UTF-8
 
 ## メッセージ一覧の取得 [GET /rooms/{room_id}/messages]
 
-<span style="color:red">**このAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。**</span>
 
 ### リクエスト
 
@@ -343,7 +342,6 @@ audio
 
 ## イベントの取得 [GET /rooms/{room_id}/subscribe]
 
-<span style="color:red">**このAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。**</span>
 
 ### リクエスト
 
@@ -427,7 +425,6 @@ audio
 
 ## メッセージを既読にする [POST /rooms/{room_id}/messages/{message_id}/read]
 
-<span style="color:red">**このAPIにアクセスするためには、追加の権限が必要です。BOCCOサポートにお問い合わせください。**</span>
 
 ### リクエスト
 
