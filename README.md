@@ -21,6 +21,9 @@ The http server will start on http://[your ip]:4005/
 
 - bundle exec jekyll server --watch
 
-
+## Release
+- bundle exec jekyll build
+- cd _site
+- aws s3 sync . s3://api-docs.bocco.me
 
 

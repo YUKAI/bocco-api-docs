@@ -33,6 +33,7 @@ BOCCO API の現在のステートはベータであり、実験的な段階に�
 - **node.js** [https://github.com/demaebocco/node_bocco](https://github.com/demaebocco/node_bocco)
 - **swift** [https://github.com/tfuru/TFBoccoSwift](https://github.com/tfuru/TFBoccoSwift)
 - **esp8266** [https://github.com/tfuru/BoccoEsp](https://github.com/tfuru/BoccoEsp)
+- **esp32** [ https://github.com/minwinmin/BOCCO-API-for-ESP32](https://github.com/minwinmin/BOCCO-API-for-ESP32)
 
 ## 利用事例
 
