@@ -13,6 +13,9 @@ BOCCO を Restful API を使って操作する方法を解説したドキュメ�
 
 BOCCO API の現在のステートはベータであり、実験的な段階にあります。
 
+**このAPIはBOCCO専用となります。2021年発売のBOCCO emoはこのAPIでは制御できませんのでご注意下さい。**    
+BOCCO emo用のAPIにつきましては、BOCCO emo Public APIとして近日整備する予定です。
+
 ## BOCCO API の申し込み
 
 お申し込み後5営業日以内に、APIキーなどを個別にご連絡差し上げます。
